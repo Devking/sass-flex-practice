@@ -7,6 +7,9 @@
 
 body {
   background-color: $tan;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .fixed-top {
@@ -30,5 +33,14 @@ body {
 .content {
   max-width: 1000px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin: 30px auto;
+  flex: 1 0 auto;
+}
+
+.footer {
+  background: $dark-grey;
+  flex-shrink: 0;
+  padding: 20px 0;
+  text-align: center;
+  color: $white;
 }
