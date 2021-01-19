@@ -150,6 +150,29 @@ body {
   }
 }
 
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Eczar';
+
+  &:before {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin-right: 10px;
+  }
+
+  &:after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin-left: 10px;
+  }
+}
+
 .content-flex {
   display: flex;
   flex-direction: row;
