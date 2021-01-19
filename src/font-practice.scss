@@ -15,16 +15,20 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  overflow: auto;
+  height: auto; // auto needed for the progress bar
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .fixed-top {
-  position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
   top: 0;
   z-index: 1;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .progress-container {
@@ -51,7 +55,6 @@ body {
   flex-flow: row nowrap;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 10px;
   padding: 0 8px;
 
   h1 {
@@ -101,6 +104,7 @@ body {
 .content-holder {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 20px;
 
   p {
     font-family: 'Eczar';
@@ -154,8 +158,17 @@ body {
 }
 
 .content-flex-child {
-  width: 300px;
-  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  min-width: 300px;
+  padding: 30px;
+
+  @media (max-width: 800px) {
+    flex: 1 1 auto;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0px;
+  }
 }
 
 #footer {
