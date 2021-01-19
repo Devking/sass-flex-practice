@@ -88,6 +88,11 @@ body {
 
 #hero {
   background: $light-blue;
+  background-image: url('../public/test.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
