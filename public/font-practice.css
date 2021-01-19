@@ -8,6 +8,7 @@
 html {
   height: 100%;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +18,24 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #f9f1f1;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #1870d5;
+  width: 0%;
 }
 
 #header {
@@ -31,6 +50,7 @@ body {
   flex-flow: row nowrap;
   max-width: 1000px;
   margin: 0 auto;
+  margin-top: 10px;
   padding: 0 8px;
 }
 #header-container h1 {
@@ -74,12 +94,11 @@ body {
   background: #f9f1f1;
 }
 
-#content-holder {
+.content-holder {
   max-width: 800px;
   margin: 0 auto;
-  padding: 32px;
 }
-#content-holder p {
+.content-holder p {
   font-family: "Eczar";
   font-weight: 400;
   font-size: 20px;
@@ -90,23 +109,41 @@ body {
   hyphens: auto;
   margin: 16px 0;
 }
-#content-holder p a {
+.content-holder p a {
   color: #1870d5;
 }
-#content-holder p a:hover {
+.content-holder p a:hover {
   color: #81d4fa;
 }
-#content-holder p sup {
+.content-holder p sup {
   font-size: 12px;
 }
-#content-holder h1 {
+.content-holder h1 {
   font-family: "Eczar";
   font-weight: 600;
   font-size: 32px;
   letter-spacing: -0.5px;
 }
-#content-holder strong {
+.content-holder strong {
   font-weight: 600;
+}
+.content-holder:first-of-type {
+  padding-top: 32px;
+}
+.content-holder:last-of-type {
+  padding-bottom: 32px;
+}
+
+.content-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.content-flex-child {
+  width: 300px;
+  padding: 20px;
 }
 
 #footer {
